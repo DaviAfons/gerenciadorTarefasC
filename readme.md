@@ -99,7 +99,3 @@ Desenvolvido por **Davi Afonso**.
 
 Distribuído sob a **Licença MIT** — você pode usar, estudar, modificar e distribuir livremente.
 
----
-
-```
-```
