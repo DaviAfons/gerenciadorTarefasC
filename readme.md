@@ -1,33 +1,33 @@
-📝 Gerenciador de Tarefas (CLI Task Manager)
+# 📝 Gerenciador de Tarefas (CLI Task Manager)
 
-Aplicação de linha de comando (CLI) escrita em C com foco em boas práticas de engenharia de software.
-O projeto demonstra controle manual de memória, persistência binária e arquitetura modular — resultando em um programa leve, eficiente e fácil de manter.
+Aplicação de linha de comando (**CLI**) escrita em **C**, com foco em boas práticas de engenharia de software.  
+O projeto demonstra **controle manual de memória**, **persistência binária** e **arquitetura modular** — resultando em um programa leve, eficiente e fácil de manter.
 
-🚀 Funcionalidades
+---
 
-✔️ CRUD Completo: criar, listar, editar e remover tarefas.
+## 🚀 Funcionalidades
 
-💾 Persistência Automática: dados salvos em arquivo binário (data/dados.bin) entre execuções.
+✔️ **CRUD Completo** — criar, listar, editar e remover tarefas  
+💾 **Persistência Automática** — salva dados em `data/dados.bin`  
+🧠 **Gerenciamento Dinâmico de Memória** — `malloc`, `realloc` e `free`  
+🔎 **Filtros por Status** — Pendentes ou Concluídas  
+🧱 **Arquitetura Modular** — módulos `core`, `io` e `view` separando responsabilidades
 
-🧠 Gerenciamento Dinâmico de Memória: uso de malloc, realloc e free para ajustar a lista dinamicamente.
+---
 
-🔎 Filtros de Visualização: listar tarefas por status (Pendentes ou Concluídas).
+## 🛠️ Tecnologias e Conceitos Utilizados
 
-🧱 Arquitetura Modular: separação em módulos core, io e view para facilitar manutenção.
+- Linguagem **C** (ANSI C / C99)
+- **Structs** e ponteiros
+- **File I/O** com arquivos binários (`fread`, `fwrite`)
+- **Makefile** para automação de compilação
+- **Design modular** e separação clara de responsabilidades
 
-🛠️ Tecnologias e Conceitos Utilizados
+---
 
-Linguagem C (ANSI C / C99 compatível)
+## 📂 Estrutura do Projeto
 
-Structs e ponteiros
-
-File I/O com arquivos binários (fread, fwrite)
-
-Makefile para compilação automatizada
-
-Design modular e separação de responsabilidades
-
-📂 Estrutura do Projeto
+```
 
 gerenciadorTarefas/
 ├── include/            # Headers (.h)
@@ -42,41 +42,64 @@ gerenciadorTarefas/
 ├── Makefile
 └── README.md
 
+````
 
-⚙️ Como Compilar e Executar
+---
 
-Certifique-se de ter GCC e make instalados.
+## ⚙️ Como Compilar e Executar
 
-1. Clone o repositório
+Certifique-se de ter **GCC** e **make** instalados.
 
-git clone [https://github.com/DaviAfons/gerenciadorTarefasC.git](https://github.com/DaviAfons/gerenciadorTarefasC.git)
+### 1. Clone o repositório
+```bash
+git clone https://github.com/DaviAfons/gerenciadorTarefasC.git
 cd gerenciadorTarefasC
+````
 
+### 2. Compile o projeto
 
-2. Compile o projeto
-
+```bash
 make
+```
 
+### 3. Execute a aplicação
 
-3. Execute a aplicação
-
+```bash
 ./app_tarefas
+```
 
+### 4. Limpeza (opcional)
 
-4. Limpeza (opcional)
-
+```bash
 make clean
+```
 
+---
 
-🧠 Principais Desafios
+## 🧠 Principais Desafios
 
-Um dos desafios mais relevantes foi remover elementos do array dinâmico sem deixar espaços vazios.
-A solução envolve deslocar (shift) os elementos subsequentes e ajustar a alocação com realloc, garantindo boa performance e uso eficiente da memória.
+Um dos pontos críticos foi **remover elementos do array dinâmico sem deixar buracos**.
+A solução envolve:
 
-👤 Autor
+* deslocar os elementos com *shift*;
+* realocar com `realloc`;
+* ajustar o tamanho real da lista.
 
-Desenvolvido por Davi Afonso
+Isso garante **performance**, **consistência** e **uso eficiente da memória**.
 
-📄 Licença
+---
 
-Distribuído sob a Licença MIT — sinta-se livre para usar, estudar, modificar e distribuir.
+## 👤 Autor
+
+Desenvolvido por **Davi Afonso**.
+
+---
+
+## 📄 Licença
+
+Distribuído sob a **Licença MIT** — você pode usar, estudar, modificar e distribuir livremente.
+
+---
+
+```
+```
